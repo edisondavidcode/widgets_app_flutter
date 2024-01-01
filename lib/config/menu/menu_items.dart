@@ -40,4 +40,9 @@ List<MenuItems> appMenuItems = <MenuItems>[
       subTitle: 'Stateful widgets animado',
       link: '/animated',
       icon: Icons.check_box_outline_blank_rounded),
+  MenuItems(
+      title: 'UI Controls + titles',
+      subTitle: 'Una serie de controles de Flutter',
+      link: '/ui-controls',
+      icon: Icons.car_rental_outlined),
 ];
