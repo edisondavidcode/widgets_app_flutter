@@ -50,4 +50,9 @@ List<MenuItems> appMenuItems = <MenuItems>[
       subTitle: 'Pequeño tutorial introductorio',
       link: '/tutorial',
       icon: Icons.accessible_rounded),
+  MenuItems(
+      title: 'InfiniteScroll y Pull',
+      subTitle: 'PListas infinitas y pull to refresh',
+      link: '/infinite',
+      icon: Icons.list_alt_rounded),
 ];
