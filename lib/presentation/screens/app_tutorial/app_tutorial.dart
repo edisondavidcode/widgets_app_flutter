@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class SlideInfo {
   final String title;
@@ -16,11 +17,11 @@ final slides = <SlideInfo>[
   SlideInfo(
       'Entrega rápida',
       'Ullamco commodo est exercitation ullamco dolore eiusmod consectetur amet do non adipisicing aliquip minim. Est reprehenderit sunt irure est elit nisi tempor anim tempor exercitation. Aliqua esse nostrud exercitation enim mollit irure nulla. Fugiat occaecat adipisicing sint dolor mollit fugiat et exercitation duis commodo qui commodo amet quis. Aliquip tempor pariatur est veniam. Sunt fugiat consequat amet occaecat ipsum esse mollit. Voluptate irure labore occaecat officia velit sunt commodo deserunt nisi anim dolor duis fugiat.',
-      'assets/images/1.png'),
+      'assets/images/2.png'),
   SlideInfo(
       'Disfruta a comida',
       'Fugiat ut dolor cillum eiusmod fugiat. Do id dolor nostrud et cillum cillum laborum. Proident non tempor duis eu dolore consectetur consequat anim.',
-      'assets/images/1.png'),
+      'assets/images/3.png'),
 ];
 
 class AppTutorial extends StatelessWidget {
@@ -31,14 +32,24 @@ class AppTutorial extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: PageView(
-        physics: const BouncingScrollPhysics(),
-        children: slides
-            .map((slidedata) => _Slide(
-                title: slidedata.title,
-                caption: slidedata.caption,
-                imageUrl: slidedata.imageUrl))
-            .toList(),
+      backgroundColor: Colors.white,
+      body: Stack(
+        children: [
+          PageView(
+            physics: const BouncingScrollPhysics(),
+            children: slides
+                .map((slidedata) => _Slide(
+                    title: slidedata.title,
+                    caption: slidedata.caption,
+                    imageUrl: slidedata.imageUrl))
+                .toList(),
+          ),
+          Positioned(
+              right: 20,
+              top: 50,
+              child: TextButton(
+                  onPressed: () => context.pop(), child: const Text('Salir')))
+        ],
       ),
     );
   }
@@ -54,6 +65,22 @@ class _Slide extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    final titleStyle = Theme.of(context).textTheme.titleLarge;
+    final captionStyle = Theme.of(context).textTheme.bodyLarge;
+
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 20),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Image(image: AssetImage(imageUrl)),
+          const SizedBox(height: 20),
+          Text(title, style: titleStyle),
+          const SizedBox(height: 20),
+          Text(caption, style: captionStyle),
+        ],
+      ),
+    );
   }
 }
