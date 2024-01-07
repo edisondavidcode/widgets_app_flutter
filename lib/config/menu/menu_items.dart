@@ -17,7 +17,7 @@ class MenuItems {
 List<MenuItems> appMenuItems = <MenuItems>[
   MenuItems(
       title: 'Riverpood Counter',
-      subTitle: 'Introduccion a riverpod Counter Screen en Flutter',
+      subTitle: 'Introducción a riverpod Counter Screen en Flutter',
       link: '/counter-river',
       icon: Icons.add),
   MenuItems(
@@ -36,7 +36,7 @@ List<MenuItems> appMenuItems = <MenuItems>[
       link: '/progress',
       icon: Icons.refresh_rounded),
   MenuItems(
-      title: 'Snackbars y dialogos',
+      title: 'Snackbars y diálogos',
       subTitle: 'Indicadores en pantalla',
       link: '/snackbars',
       icon: Icons.info_outline),
@@ -51,7 +51,7 @@ List<MenuItems> appMenuItems = <MenuItems>[
       link: '/ui-controls',
       icon: Icons.car_rental_outlined),
   MenuItems(
-      title: 'Introduccion a la aplicacion',
+      title: 'Introducción a la aplicación',
       subTitle: 'Pequeño tutorial introductorio',
       link: '/tutorial',
       icon: Icons.accessible_rounded),
@@ -60,4 +60,9 @@ List<MenuItems> appMenuItems = <MenuItems>[
       subTitle: 'PListas infinitas y pull to refresh',
       link: '/infinite',
       icon: Icons.list_alt_rounded),
+  MenuItems(
+      title: 'Cambiar tema y Pull',
+      subTitle: 'Cambia ema de la aplicación',
+      link: '/theme-changer',
+      icon: Icons.color_lens_outlined),
 ];

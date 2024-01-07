@@ -7,4 +7,5 @@ export 'package:widgets_app_flutter/presentation/screens/counter/counter_screen.
 export 'package:widgets_app_flutter/presentation/screens/home/home_screen.dart';
 export 'package:widgets_app_flutter/presentation/screens/infinite_scroll/infiniti_scroll_screen.dart';
 export 'package:widgets_app_flutter/presentation/screens/progress/progress_screen.dart';
+export 'package:widgets_app_flutter/presentation/screens/theme_changer/theme_changer_screen.dart';
 export 'package:widgets_app_flutter/presentation/screens/ui_controls/ui_constrols_screen.dart';

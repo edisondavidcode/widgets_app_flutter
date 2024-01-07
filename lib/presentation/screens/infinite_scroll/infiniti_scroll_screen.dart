@@ -2,16 +2,16 @@ import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-class InfinitiScrollScreen extends StatefulWidget {
-  static const name = 'infiniti_scroll_screen';
+class InfiniteScrollScreen extends StatefulWidget {
+  static const name = 'infinite_scroll_screen';
 
-  const InfinitiScrollScreen({super.key});
+  const InfiniteScrollScreen({super.key});
 
   @override
-  State<InfinitiScrollScreen> createState() => _InfinitiScrollScreenState();
+  State<InfiniteScrollScreen> createState() => _InfiniteScrollScreenState();
 }
 
-class _InfinitiScrollScreenState extends State<InfinitiScrollScreen> {
+class _InfiniteScrollScreenState extends State<InfiniteScrollScreen> {
   List<int> imagesIds = [1, 2, 3, 4, 5];
   final ScrollController scrollController = ScrollController();
   bool isLoading = false;
